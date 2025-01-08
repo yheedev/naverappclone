@@ -7,7 +7,11 @@
   color: #767678;
 
   &::before {
-    @include mixin.spImg("/img/sp/sp_search.png", -214px -92px, 408px 372px);
+    @include mixin.spImg(
+      "../../img/sp/sp_search.png",
+      -214px -92px,
+      408px 372px
+    );
 
     content: "";
     width: 40px;

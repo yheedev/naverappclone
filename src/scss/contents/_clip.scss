@@ -33,7 +33,7 @@
         height: 20px;
 
         @include mixin.spImg(
-          "/img/sp/sp_search.png",
+          "../../img/sp/sp_search.png",
           -73px -297px,
           408px 372px
         );
@@ -77,7 +77,11 @@
         vertical-align: -2px;
         margin-right: 3px;
 
-        @include mixin.spImg("/img/sp/sp_main.png", -216px -204px, 254px 220px);
+        @include mixin.spImg(
+          "../../img/sp/sp_main.png",
+          -216px -204px,
+          254px 220px
+        );
       }
 
       &__time {

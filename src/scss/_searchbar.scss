@@ -12,7 +12,7 @@
 
   &__logo {
     @include mixin.spImg(
-      "/img/sp/sp_main_search.png",
+      "../img/sp/sp_main_search.png",
       -2px -194px,
       323px 273px
     );
@@ -38,7 +38,8 @@
     font-weight: 500;
     border: 1px solid #03c75a;
     padding: 0 10px;
-    box-shadow: 0 5px 10px 0 rgba(117, 145, 181, 0.12);
+    box-shadow: 0 5px 10px 0
+      rgba(117, 145, 181, 0.12);
 
     &__input {
       width: 100%;
@@ -75,7 +76,7 @@
 
     &__voice {
       @include mixin.spImg(
-        "/img/sp/sp_main_search.png",
+        "../img/sp/sp_main_search.png",
         -258px -194px,
         323px 273px
       );

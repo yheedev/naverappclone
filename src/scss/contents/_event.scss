@@ -30,7 +30,11 @@
       vertical-align: top;
       margin: 0 12px 0 24px;
 
-      @include mixin.spImg("/img/sp/sp_search.png", 408px 372px, 0 0);
+      @include mixin.spImg(
+        "../../img/sp/sp_search.png",
+        408px 372px,
+        0 0
+      );
     }
   }
 
@@ -49,7 +53,11 @@
       vertical-align: top;
       margin: 20px 24px 0 4px;
 
-      @include mixin.spImg("/img/sp/sp_search.png", 408px 372px, -147px -111px);
+      @include mixin.spImg(
+        "../../img/sp/sp_search.png",
+        408px 372px,
+        -147px -111px
+      );
     }
   }
 }

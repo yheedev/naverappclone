@@ -26,7 +26,7 @@
 
     &__menu {
       @include mixin.spImg(
-        "/img/sp/sp_main_search.png",
+        "../img/sp/sp_main_search.png",
         -47px -145px,
         323px 273px
       );
@@ -34,7 +34,7 @@
 
     &__pay {
       @include mixin.spImg(
-        "/img/sp/sp_main_search.png",
+        "../img/sp/sp_main_search.png",
         -88px -191px,
         323px 273px
       );
@@ -42,7 +42,7 @@
 
     &__talk {
       @include mixin.spImg(
-        "/img/sp/sp_main_search.png",
+        "../img/sp/sp_main_search.png",
         -135px -192px,
         323px 273px
       );
@@ -50,7 +50,7 @@
 
     &__alert {
       @include mixin.spImg(
-        "/img/sp/sp_main_search.png",
+        "../img/sp/sp_main_search.png",
         -49px -192px,
         323px 273px
       );
@@ -58,7 +58,7 @@
 
     &__na {
       @include mixin.spImg(
-        "/img/sp/sp_main_search.png",
+        "../img/sp/sp_main_search.png",
         -261px -76px,
         323px 273px
       );

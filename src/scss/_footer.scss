@@ -103,7 +103,11 @@
         height: 23px;
         margin: auto;
 
-        @include mixin.spImg("/img/sp/sp_main.png", 254px 220px, -84px -140px);
+        @include mixin.spImg(
+          "../img/sp/sp_main.png",
+          254px 220px,
+          -84px -140px
+        );
       }
     }
   }
@@ -151,6 +155,10 @@
     overflow: hidden;
     vertical-align: top;
 
-    @include mixin.spImg("/img/sp/sp_main.png", 245px 220px, -47px -120px);
+    @include mixin.spImg(
+      "../img/sp/sp_main.png",
+      245px 220px,
+      -47px -120px
+    );
   }
 }

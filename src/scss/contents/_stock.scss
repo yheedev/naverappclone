@@ -86,7 +86,11 @@
       vertical-align: top;
       margin: 0 4px 0 0;
 
-      @include mixin.spImg("/img/sp/sp_search.png", -178px -147px, 408px 372px);
+      @include mixin.spImg(
+        "../../img/sp/sp_search.png",
+        -178px -147px,
+        408px 372px
+      );
     }
 
     &__price {
@@ -152,7 +156,12 @@
           position: absolute;
           top: 15px;
           left: 0;
-          background-color: rgba(125, 127, 133, 0.2);
+          background-color: rgba(
+            125,
+            127,
+            133,
+            0.2
+          );
         }
       }
     }

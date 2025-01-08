@@ -15,49 +15,19 @@
         document.addEventListener("DOMContentLoaded", function () {
           const params = new URLSearchParams(window.location.search);
           const query = params.get("query");
+          const data = JSON.parse(decodeURIComponent(params.get("data")));
           
           // 검색어 없을 경우
-            if (!query) {
+            if (!query || !data) {
               document.getElementById('results').innerHTML = '<p>검색어를 입력해주세요</p>';
               return;
             }
 
-        // 검색어 있을 경우에만 API 요청
-          async function searchBlog (query) {
-            const CLIENT_ID = 'oINvcti2ijXhM9DxWau8';
-            const CLIENT_SECRET = 'laXayxxY8j';
-            
-            const BASE_URL = "/api";
-            //const BASE_URL = window.location.hostname === "localhost" ? "https://openapi.naver.com" : "/proxy";
-            const API_URL = `/v1/search/blog?query=${encodeURI(query)}&display=10&start=1&sort=date`;
-
-            try {
-              const response = await fetch(`${BASE_URL}${API_URL}`, {
-                method: "GET",
-                headers: {
-                  "X-Naver-Client-Id": CLIENT_ID,
-                  "X-Naver-Client-Secret": CLIENT_SECRET,
-                },
-              });
-              
-              if (!response.ok) {
-                const errorText = await response.text();
-                throw new Error(`HTTP error! status: ${response.status}, body: ${errorText}`);
-              }
-              const data = await response.json();
-              displayResults(data);
-            
-            } catch (error) {
-              console.error("Error:", error);
-              document.getElementById('results').innerHTML = `<p>검색 중 오류가 발생했습니다.</p>: ${error.message}`;
-            }
-          }
-
-          function displayResults(data) {
+          // function displayResults(data) {
             const resultsContainer = document.getElementById("results");
-            resultsContainer.innerHTML = `<h1>네이버 블로그 검색 API 요청 응답: ${query}에 대한 검색 결과</h1>`;
+            resultsContainer.innerHTML = `<h1>네이버 블로그 API에서 ${query}에 대한 검색 결과</h1>`;
 
-            if (data && data.items && Array.isArray(data.items)) {
+            if (data.items && Array.isArray(data.items)) {
               resultsContainer.innerHTML += data.items
                 .map(item => `
                     <div class="result-item">
@@ -67,11 +37,11 @@
                     </div>
                   `).join("");
               } else {
-              resultsContainer.innerHTML += "<p>검색 결과가 없습니다.</p>";
+              resultsContainer.innerHTML += `"<p> ${query}에 대한 검색 결과가 없습니다.</p>"`;
               }        
             }
-          searchBlog(query);
-        });
+        //}
+      );
       </script>
     </main>
   </body>

@@ -11,7 +11,8 @@
       padding-top: 6px;
 
       &:not(:last-of-type) {
-        border-bottom: 1px solid hsl(213, 27%, 94%);
+        border-bottom: 1px solid
+          hsl(213, 27%, 94%);
       }
 
       &__left {
@@ -26,7 +27,7 @@
           top: 50%;
 
           @include mixin.spImg(
-            "/img/sp/sp_search.png",
+            "../../img/sp/sp_search.png",
             500px 456px,
             -358px -392px
           );
@@ -41,7 +42,7 @@
         position: relative;
 
         @include mixin.spImg(
-          "/img/sp/sp_search.png",
+          "../../img/sp/sp_search.png",
           500px 456px,
           -390px -392px
         );
